@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="b3.css">
+    <title>Bitacora3</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg color">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Bitacora 3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">FrameWorks</a>
+                    <a class="nav-link activo" aria-current="page" href="#">Unidades responsivas</a>
+                    <a class="nav-link" href="mf.html">Mobile first</a>
+                    <a class="nav-link" href="mdg.html">Modulo Grid</a>
+                    <a class="nav-link" href="sup.html">@supports</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <picture>
+            <source srcset="img/mdds200.jpg" media="(max-width: 720px)">
+            <source srcset="img/mdds500.jpg" media="(max-width: 480px)">
+
+            <img src="img/mdds1000.jpg " style="width: 100%;">
+        </picture>
+    </header>
+    <main>
+
+        <h1>Unidades CSS</h1>
+        <section>
+            <h2>Objetivo</h2>
+            <p>El objetivo de esta clase es que las y los estudiantes sean capaces de comprender y aplicar diversas
+                unidades CSS, cibn un enfoque especial en las unidades responsivas y efectivas que se ajusten a
+                diferentes tamaños y resoluciones de pantalla. </p>
+        </section>
+        <section>
+            <h2>Unidades absolutas</h2>
+            <p>
+                Las unidades absolutacs, como px (pixeles), cm (centimetros) e in (pulgadas), reprecentan tamaños fijos
+                y no cambian independientemente del contexto en el que se utilicen, proporcionando una medida exacta que
+                puede ser útil para diseños que requieran de precisión milimetrica.
+            </p>
+
+            <picture>
+                <source src="img/pixeles-a-cm100.jpg" media="(max-width:720px)">
+                <source src="img/pixeles-a-cm250.jpg" media="(max-width:480px)">
+
+                <img src="img/pixeles-a-cm300.jpg" style="width: 100%;">
+
+            </picture>
+        </section>
+        <section>
+            <h2>Unidades relativas</h2>
+            <p> Las unidades relativas, como % (porcentaje), em, rem, son flexibles y se adaptan en funcion de otros
+                elemetnos.
+            </p>
+            <p>Por ejemplo % es relativo al tamaño del contenedor padre, em es relativo al tamaño de fuente del
+                elemento padre y rem es relativo al tamaño de fuente del elemento raíz (html)
+            </p>
+            <p>Las unidades relativas son ideales para crear diseños responsivos, ya que permiten que los elemtenos del
+                diseño cambien en respuesta al tamaño de la pantalla.
+            </p>
+        </section>
+        <section>
+            <h2>Unidades de vista de la ventana</h2>
+            <p>Las unidades de vista de ventana son herramientas que se ajustan dinámicamente al tamaño de la ventana
+                fráfica del navegador.
+            </p>
+            <ul>
+                <li>vw</li>
+                <li>vh</li>
+                <li>vmin</li>
+                <li>vmax</li>
+            </ul>
+            <h3>vw y vh</h3>
+            <p>El "vw" significa viewport width y reprecenta un porcentaje del ancho de la ventana, donde 1vw es igual
+                al 1% del ancho total de la ventana </p>
+            <picture>
+                <source srcset="img/vw250.jpg" media="(max-width: 480px)">
+                <source srcet="img/vw500.jpg" media="(max-width: 720px)">
+                <img src="img/vw.png" style="width: 100%;">
+            </picture>
+            <p>Vh siginifica viewport heigth y reprecenta un porcentaje de la altura de la ventana, dodne 1vh es igual
+                al 1% de la altura total de la ventana. </p>
+            <picture>
+                <source srcset="img/vh250.jpg" media="(max-width: 480px)">
+                <source srcset="img/vh500.jpg" media="(max-width:720px)">
+
+                <img src="img/vh.jpg" style="width: 100%;">
+            </picture>
+            <h3>vmin y vmax</h3>
+            <p>Vmin y vmax toman el valor mínimo y máximo entre el ancho y la altura de la ventana, respectivamente, lo
+                que permite una adaptabilidad aún mayor en situaciones donde la orientación de la pantalla puede variar.
+            </p>
+        </section>
+        <section>
+            <h2>Unidades dinamicas de vista de ventana</h2>
+            <p>Las unidades dinamicas ofrecen mayor precisión en el diseño responsivo poque toman en cuenta las
+                variaciónes de tamaño de las ventana gráfica en dispositivos móviles </p>
+            <ul>
+                <li>dvh</li>
+                <li>svh</li>
+                <li>lvh</li>
+            </ul>
+            <h3>dvh</h3>
+            <p>La unidad dvh significa dynamic viewport height (altura del viewport dinámico y representa el 1%) de la
+                altura de la ventana gráfica dinámica, ajustandose en tiempo real a los cambios en la interfaz de
+                usuario, como la aparicion o desaparición de barras de navegación. </p>
+            <h3>svh</h3>
+            <p>Significa small viewport heigth(altura del viewport pequeño) y corresponde al 1% de la altura del a
+                ventana gráfica más pequeña que el navegador ha registrado, proporcionando un valor estable que evita
+                cambios bruscos en el layout. </p>
+            <h3>lvh</h3>
+            <p>Lvh(large viewport heigth) por su parte, se refiere al 1% de la altura de la ventan gráfica más grande
+                registradam permitiendo diseñar para el máximo espacio disponible sin que se vea afectado por cambios
+                temporales en viewport </p>
+            <picture>
+                <source srcset="img/svh-llvh-svh500.jpg" media="(max-width: 480px)">
+                <source srcset="img/svh-llvh-svh250.jpg" media="(max-width:720px)">
+
+                <img src="img/svh-llvh-svh.png" style="width: 100%;">
+            </picture>
+
+            <p>Al ser unidades relativamente nuevas, el soporte de navegador puede variar. </p>
+            <p>Los navegadores modernos como las últimas versiones de chrome, firefox, safari y Edge suelen ser los
+                primeros en implementar estas nuevas caracteristicas. </p>
+            <p>Peros esposible que algunos navegadores más antiguos o menos utilizados no las soporten completamente.
+            </p>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
